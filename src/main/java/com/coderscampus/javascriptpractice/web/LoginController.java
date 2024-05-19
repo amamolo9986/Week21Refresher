@@ -10,7 +10,7 @@ import com.coderscampus.javascriptpractice.domain.User;
 public class LoginController {
 	
 	@GetMapping("/login")
-	public String getLogin(ModelMap model) {
+	public String getUser(ModelMap model) {
 		User user = new User();
 		model.put("user", user);
 		return "login";
