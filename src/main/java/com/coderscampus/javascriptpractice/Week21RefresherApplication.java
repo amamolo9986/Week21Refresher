@@ -46,7 +46,7 @@ public class Week21RefresherApplication {
         }
 	 * 
 	 * Video 5; Selecting Objects from the DOM
-	 * 
+	 * Selecting an element in order to do something with it. 
+	 * We will demonstrate this by adding a button
 	 */
-	
 }

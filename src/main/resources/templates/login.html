@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="https://thymeleaf.org">
+
 <head>
     <title>Login</title>
     <script type="text/javascript">
@@ -7,7 +8,7 @@
         var name = `Alex`
         var age = 28
 
-        alert(`hello world, my name is ` + name + ` and i am `+ age + ` years old`)
+        console.log(`hello world, my name is ` + name + ` and i am ` + age + ` years old`)
         console.log(`hello world, my name is ${name} and i'm ${age} years old`)
         console.log(`the value of "age" is: ${age}, the data type is ${typeof age}`)
 
@@ -16,7 +17,7 @@
 
         console.log(`the value of "car" is: ${car}`)
         console.log(`the value of "tesla" is: ${tesla}`)
-        
+
         console.log(`5 + 10 = ${5 + 10}`)
 
         var person = {
@@ -31,16 +32,25 @@
             }
         }
         console.log(person)
- 
- </script>
+    </script>
 </head>
+
 <body>
     <h1>Login Below</h1>
     <div>
-        Username: <input type="text" th:field="${user.username}"/>
+        Username: <input type="text" th:field="${user.username}" />
     </div>
     <div>
-        Password: <input type="password" th:field="${user.password}"/>
+        Password: <input type="password" th:field="${user.password}" />
     </div>
+    <div>
+        <button type="button" id="submitBtn">Submit</button>
+    </div>
+    <script>
+        var submitBtn = document.querySelector("#submitBtn")
+        console.log(`submitBtn is:`)
+        console.log(submitBtn)
+    </script>
 </body>
+
 </html>
