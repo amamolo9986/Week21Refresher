@@ -24,7 +24,28 @@ public class Week21RefresherApplication {
 	 * 
 	 * Video 3: Declaring Variables in JS
 	 * Data types exist but they are handled for us by the JS engine. We dont 
-	 * define types explicitly. we say "var variableName = literal"
+	 * define types explicitly. we say "var variableName = literal".
+	 * JS has something called dynamic typing, this means that it tries to figure 
+	 * out the data type based on code context. a literal surround by quote or
+	 * backtick will be interpreted as string, etc.
+	 * 
+	 * Side note, == checks value, === checks value and type
+	 * 
+	 * Video 4: Data Types 
+	 * Objects in JS are created by using curly brackets
+	 * var person = {
+            'firstName': 'Alex',
+            'lastName': 'McMahon',
+            'age': '28',
+            'address': {
+                'line 1': '123 Fake Street',
+                'line 2': 'apt 3',
+                'city': 'San Antonio',
+                'state': 'Texas'
+            }
+        }
+	 * 
+	 * Video 5; Selecting Objects from the DOM
 	 * 
 	 */
 	
