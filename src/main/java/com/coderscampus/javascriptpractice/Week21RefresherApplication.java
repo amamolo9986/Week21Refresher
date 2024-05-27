@@ -47,6 +47,21 @@ public class Week21RefresherApplication {
 	 * 
 	 * Video 5; Selecting Objects from the DOM
 	 * Selecting an element in order to do something with it. 
-	 * We will demonstrate this by adding a button
+	 * We will demonstrate this by adding a button, when we click on the button, we 
+	 * want to validate the form to make sure the username and password was entered, 
+	 * then the form is sent.
+	 * 
+	 * How do we do that? We have to select it first. To select, we add an Id, then we 
+	 * are able to select the Id by accessing the DOM in which it is stored, or 
+	 * Document Object Model.
+	 * 
+	 * So we have given the submit button we created an id of "submitBtn", and we select
+	 * it by saying 'document.querySelector("#submitBtn")'. And this will return the 
+	 * object that we can then assign to a variable.
+	 * 
+	 * var submitBtn = document.querySelector("#submitBtn")
+	 * 
+	 * 
+	 * 
 	 */
 }
