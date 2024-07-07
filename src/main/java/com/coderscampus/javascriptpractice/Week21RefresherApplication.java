@@ -68,6 +68,39 @@ public class Week21RefresherApplication {
 	 * 
 	 * Vid 6: Event Listeners
 	 * 
+	 * So the concept that we're looking at here is when we click the submit button, we
+	 * want to validate the login forms. And by that we mean did they type the username
+	 * and the password and is the username in the db, or something like that.
+	 * 
+	 * So how do we add functionality now that we've selected the submit button?
+	 * 
+	 * Well we add whats called an event listener. when the button is interacted with, the event
+	 * listener tells it what to do. When something is selected, an event listener executes
+	 * an action when an interaction is specified. 
+	 * 
+	 * When you hover, do this, when you click, do this, when your mouse leaves the button, do
+	 * this, etc.
+	 * 
+	 * So we say submitBtn.addEventListener(`click`) because we want to verify the forms on click.
+	 * But we can also add a function directly into the parameter, and the word'function' 
+	 * is a keyword in js to define a method, it also takes params and a body, then
+	 * we give the function a name. 
+	 * 
+	 * 		submitBtn.addEventListener(`click`, function submitBtnClick(){
+	 * 		})
+	 * 		
+	 * 
 	 * 
 	 */
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -47,9 +47,13 @@
         <button type="button" id="submitBtn">Submit</button>
     </div>
     <script>
-        var submitBtn = document.querySelector("#submitBtn")
+        var submitBtn = document.querySelector(`#submitBtn`)
         console.log(`submitBtn is:`)
         console.log(submitBtn)
+
+        submitBtn.addEventListener(`click`, function submitBtnClick(){
+            alert(`Hey! I've been clicked!`)
+        })
     </script>
 </body>
 
