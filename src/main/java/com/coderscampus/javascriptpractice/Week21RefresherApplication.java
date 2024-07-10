@@ -84,11 +84,28 @@ public class Week21RefresherApplication {
 	 * So we say submitBtn.addEventListener(`click`) because we want to verify the forms on click.
 	 * But we can also add a function directly into the parameter, and the word'function' 
 	 * is a keyword in js to define a method, it also takes params and a body, then
-	 * we give the function a name. 
+	 * we give the function a name. We can do this in two ways:
+	 * 
+	 * 		submitBtn.addEventListener(`click`, submitBtnClick)
+	 * 		function submitBtnClick(){
+	 * 			alert(`Hey! I've been clicked`)
+	 * 		}
 	 * 
 	 * 		submitBtn.addEventListener(`click`, function submitBtnClick(){
-	 * 		})
-	 * 		
+     *      alert(`Hey! I've been clicked!`)
+     *   	})
+	 * 
+	 * Vid 7: More Event Listeners and Arrow Function
+	 * 
+	 * Going back to the previous video, we can also write the function without giving
+	 * it a name if we dont need to reference it in multiple places.
+	 * 
+	 * So if we have 'function doSomething()' we would need this name if we have multiple
+	 * event listeners like this 
+	 * 
+	 * submitBtn.addEventListener(`click`, doSomething)
+	 * submitBtn.addEventListener(`mouseover`, doSomething)
+	 * 
 	 * 
 	 * 
 	 */

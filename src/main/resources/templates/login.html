@@ -51,9 +51,22 @@
         console.log(`submitBtn is:`)
         console.log(submitBtn)
 
-        submitBtn.addEventListener(`click`, function submitBtnClick(){
-            alert(`Hey! I've been clicked!`)
+        submitBtn.addEventListener(`click`, submitBtnClick)
+        
+        function submitBtnClick () {
+            alert(`I've been clicked!`)
+        }
+
+        submitBtn.addEventListener(`mouseover`, function(){
+            console.log(`Someone's hoveringgggg`)
         })
+
+        var usernameField = document.querySelector(`#username`)
+
+        usernameField.addEventListener(`focus`, () =>
+            console.log(`Username box boii`)
+        )
+
     </script>
 </body>
 
