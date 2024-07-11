@@ -106,9 +106,86 @@ public class Week21RefresherApplication {
 	 * submitBtn.addEventListener(`click`, doSomething)
 	 * submitBtn.addEventListener(`mouseover`, doSomething)
 	 * 
+	 * now lets try to add a query selector to the username, and we dont need to add an 
+	 * ID because its a th:field and the id will automatically be the field name for this
+	 * expression "th:field="${user.username}"
+	 * 
+	 * And something else thats cool, we have lambdas in JS too, so we can drop the word
+	 * function and leave the brackets, and we can also drop the curly brackets.
+	 * 
+	 * 		usernameField.addEventListener(`focus`, () =>
+     *      console.log(`Username box boii`)
+     *   )
+     *   
+     * Next video we will do the actual validation that we were talking about
+	 * 
+	 * Video 8: Validating and Debugging
+	 * 
+	 * So in the start of this video, Trevor is getting rid of all of the JS examples
+	 * that we worked on, so i'll clear them and add them in here so i have the reference.
+	 * They can just be pasted back into VS if i want to see the examples again.
 	 * 
 	 * 
-	 */
+	 *  <script type="text/javascript">
+
+        var name = `Alex`
+        var age = 28
+
+        console.log(`hello world, my name is ` + name + ` and i am ` + age + ` years old`)
+        console.log(`hello world, my name is ${name} and i'm ${age} years old`)
+        console.log(`the value of "age" is: ${age}, the data type is ${typeof age}`)
+
+        var car
+        var tesla = null
+
+        console.log(`the value of "car" is: ${car}`)
+        console.log(`the value of "tesla" is: ${tesla}`)
+
+        console.log(`5 + 10 = ${5 + 10}`)
+
+        var person = {
+            'firstName': 'Alex',
+            'lastName': 'McMahon',
+            'age': '28',
+            'address': {
+                'line 1': '123 Fake Street',
+                'line 2': 'apt 3',
+                'city': 'San Antonio',
+                'state': 'Texas'
+            }
+        }
+        console.log(person)
+        
+        
+        var submitBtn = document.querySelector(`#submitBtn`)
+        console.log(`submitBtn is:`)
+        console.log(submitBtn)
+
+        submitBtn.addEventListener(`click`, submitBtnClick)
+        
+        function submitBtnClick () {
+            alert(`I've been clicked!`)
+        }
+
+        submitBtn.addEventListener(`mouseover`, function(){
+            console.log(`Someone's hoveringgggg`)
+        })
+
+        var usernameField = document.querySelector(`#username`)
+
+        usernameField.addEventListener(`focus`, () =>
+            console.log(`Username box boii`)
+        )
+    </script>
+    *
+    *
+    * And now what we have left essentially is the query selector for the submit
+    * button and the click event listener. Then we will add a function call to it,
+    * then we assign a query selector to the username, then we will do the same 
+    * for the password. Now we add a conditional statement to validate.
+    *
+    * 
+	*/
 }
 
 
