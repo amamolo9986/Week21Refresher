@@ -14,6 +14,7 @@ public class Week21RefresherApplication {
 	 * 
 	 * Video 1: Setting up the project
 	 * 
+	 * 
 	 * Video 2: Hello World
 	 * JS lives in a web page and a browser is in charge of working with JS.
 	 * They essentially have JS engines that can be used to interpret.
@@ -21,6 +22,7 @@ public class Week21RefresherApplication {
 	 * "Client Side" language. JS can be ran on the server, but thats Node JS. 
 	 * 
 	 * Is declared in the head or the body of HTML page using <script><script/>
+	 * 
 	 * 
 	 * Video 3: Declaring Variables in JS
 	 * Data types exist but they are handled for us by the JS engine. We dont 
@@ -30,6 +32,7 @@ public class Week21RefresherApplication {
 	 * backtick will be interpreted as string, etc.
 	 * 
 	 * Side note, == checks value, === checks value and type
+	 * 
 	 * 
 	 * Video 4: Data Types 
 	 * Objects in JS are created by using curly brackets
@@ -44,6 +47,7 @@ public class Week21RefresherApplication {
                 'state': 'Texas'
             }
         }
+	 * 
 	 * 
 	 * Video 5: Selecting Objects from the DOM
 	 * Selecting an element in order to do something with it. 
@@ -65,6 +69,7 @@ public class Week21RefresherApplication {
 	 * object that we can then assign to a variable.
 	 * 
 	 * var submitBtn = document.querySelector("#submitBtn")
+	 * 
 	 * 
 	 * Vid 6: Event Listeners
 	 * 
@@ -95,6 +100,7 @@ public class Week21RefresherApplication {
      *      alert(`Hey! I've been clicked!`)
      *   	})
 	 * 
+	 * 
 	 * Vid 7: More Event Listeners and Arrow Function
 	 * 
 	 * Going back to the previous video, we can also write the function without giving
@@ -119,7 +125,8 @@ public class Week21RefresherApplication {
      *   
      * Next video we will do the actual validation that we were talking about
 	 * 
-	 * Video 8: Validating and Debugging
+	 * 
+	 * Video 8: Validating and Debugging - GOOD INFO IN THIS ONE
 	 * 
 	 * So in the start of this video, Trevor is getting rid of all of the JS examples
 	 * that we worked on, so i'll clear them and add them in here so i have the reference.
@@ -127,7 +134,7 @@ public class Week21RefresherApplication {
 	 * 
 	 * 
 	 *  <script type="text/javascript">
-
+	
         var name = `Alex`
         var age = 28
 
@@ -183,7 +190,42 @@ public class Week21RefresherApplication {
     * button and the click event listener. Then we will add a function call to it,
     * then we assign a query selector to the username, then we will do the same 
     * for the password. Now we add a conditional statement to validate.
-    *
+    * 
+    * We added our conditional statement, but it didnt work, so now trevor is showing
+    * us how to debug JS. What we do is navigate to the sources tab in dev tools and 
+    * you select a break point from within that, then click the element on the page you
+    * are working on to initiate the debugger. This starts around 3 minutes.
+    * 
+    * 
+    * Video 9: Objects and Arrays
+    * 
+    * Starts by taking script out of the html directly and putting it in its own file
+    * 
+    * Now lets move on to arrays and objects. So lets say that we want to keep a history 
+    * of login attempts - for no real reason other than demonstration.
+    * 
+    * So we create a user object, and while login attempts are valid, we assign a username
+    * and a password to this user object, then we store it in an array of users.
+    * 
+    * {} = Objects; [] = Arrays
+    * 
+    * User Object: 
+    *	var user = {
+    *        "username" : username.value,
+    *        "password" : password.value
+    *    }
+    * 
+    * Array of Users:
+    * 	var users = []
+    * 
+    * And to add a user to an array we dont say users.add (user), we say users.push(user).
+    * 
+    * We can check to see if it assigned the username and password and stored in the array
+    * by creating a break point on our users.push line, filling in the fields, stepping 
+    * over, then hovering over the array and the user object. We should see the user pop up.
+    * 
+    * Video 10: Fetch API
+    * 
     * 
 	*/
 }

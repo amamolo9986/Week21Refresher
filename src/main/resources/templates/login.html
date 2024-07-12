@@ -16,21 +16,7 @@
     <div>
         <button type="button" id="submitBtn">Submit</button>
     </div>
-    <script>
-        var submitBtn = document.querySelector(`#submitBtn`)
-        
-        submitBtn.addEventListener(`click`, () => {
-            var username = document.querySelector(`#username`)
-            var password = document.querySelector(`#password`)
-
-            if (username.value == `` || password.value == ``){
-                alert(`Please enter a username or password`)
-            } else {
-                console.log(`Inputs valid for form submission`)
-            }
-        })
-        
-    </script>
+    <script type="text/javascript" src="/js/login.js"></script>
 </body>
 
 </html>
