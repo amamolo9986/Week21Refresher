@@ -227,6 +227,29 @@ public class Week21RefresherApplication {
     * Video 10: Fetch API
     * 
     * 
+    * This is more advanced but we have seen this before 
+    * 
+    * Fetch is a JS method that can be leveraged to complete an HTTP request to an end point
+    * but instead of using postman we are using JS. JS is performing the HTTP request for us 
+    * and what it can do is communicate to the controllers in the server side.
+    * 
+    * But specifically this fetch will talk to RestControllers, and instead of returning
+    * a view, it returns objects in JSON format. Then we can do something with this JSON formatted
+    * object in JS.
+    * 
+    * So how are we going to use this inside of our code?
+    * 
+    * Well with what we have now, we can have it validate the username to see if the username 
+    * exists. A real world version of this is if youre registering for a website, it may 
+    * let you know if a particular username has already been taken.
+    * 
+    * So to start this, we can add a query selector to the username field, then we add an event
+    * listener to that username field.
+    * 
+    * So we're saying, "on blur, or when we leave the username text box, do something"
+    * 
+    * 6:45
+    * 
 	*/
 }
 
