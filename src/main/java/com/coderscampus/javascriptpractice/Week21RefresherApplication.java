@@ -246,9 +246,31 @@ public class Week21RefresherApplication {
     * So to start this, we can add a query selector to the username field, then we add an event
     * listener to that username field.
     * 
-    * So we're saying, "on blur, or when we leave the username text box, do something"
+    * So we're saying, "on blur, or when we leave the username text box, do something." And now
+    * we can set up our function with our fetch api.
     * 
-    * 6:45
+    * Now to do this we set up a fetch parameter, and within that we add the endpoint we
+    * want to fetch. So we'll add this fetch(`http://localhost:8080/users/validation`) and
+    * this doesnt exist yet, so we create it.
+    * 
+    * We will create a user controller that is a rest controller, then create the mapping for
+    * the fetch api endpoint.
+    * 
+    * After we do that, we add a .then() to say, once you've retrieved this method from this 
+    * endpoint, THEN do something. So, "then", a "response method", then "the methods signature".
+    * So you retrieve the endpoint, then you respond with this method, basically.
+    * 
+    * .then((respond) => {
+    * 
+    * })
+    * 
+    * then we just added a console log with the response and now we can see when we tab out of 
+    * the username field, we see the request being sent. We cant really read the response 
+    * yet, but we'll learn how to do that.
+    * 
+    * At 20 min he shows us how it works in debug mode
+    * 
+    * 
     * 
 	*/
 }

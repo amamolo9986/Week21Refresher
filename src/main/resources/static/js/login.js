@@ -18,4 +18,9 @@ submitBtn.addEventListener(`click`, () => {
     }
 })
 
-username.addEventListener(`blur`)
+username.addEventListener(`blur`, () => {
+    fetch(`http://localhost:8080/users/validation`)
+    .then((response) => {
+        console.log(response)
+    })
+})
