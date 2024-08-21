@@ -11,16 +11,21 @@ submitBtn.addEventListener(`click`, () => {
     } else {
         console.log(`Inputs valid for form submission`)
         var user = {
-            "username" : username.value,
-            "password" : password.value
+            "username": username.value,
+            "password": password.value
         }
         users.push(user)
     }
 })
 
 username.addEventListener(`blur`, () => {
-    fetch(`http://localhost:8080/users/validation`)
-    .then((response) => {
-        console.log(response)
-    })
+    var username = document.querySelector(`#username`)
+    var password = document.querySelector(`#password`)
+    fetch(`http://localhost:8080/users/validation?username=${username.value}&password=${password.value}`)
+        .then((response) => {
+            return response.json()
+        })
+        .then((jsonResponse) => {
+            console.log(jsonResponse)
+        })
 })

@@ -270,7 +270,57 @@ public class Week21RefresherApplication {
     * 
     * At 20 min he shows us how it works in debug mode
     * 
+    * Video 11: Fetch API Customizations
     * 
+    * 
+    * So just to reiterate, if we have not noticed, this "fetch(`http://localhost:8080/users/validation`)"
+    * essentially performs a get request. because the /validation endpoint is a get mapping
+    * endpoint. And also, by default, it performs a get request. But how can we modify it to do 
+    * something other than a get request? Like a post? Well we can overload this fetch to become a 
+    * post.
+    * 
+    * and typically when we want to send data to the server, we want to send it as a post rather 
+    * than a get. It can be sent as a get, we just cant send data with a get inside of the body
+    * of the request. Remember a request has a header and a body and with a get there is no 
+    * body so you would have to send it in the URL. for example:
+    * 	"fetch(`http://localhost:8080/users/validation?username=${username.value}&password=${password.value}`)"
+    * 
+    * And all together like this as a get:
+    * 
+    * username.addEventListener(`blur`, () => {
+    * 	var username = document.querySelector(`#username`)
+    * 	var password = document.querySelector(`#password`)
+    * 	fetch(`http://localhost:8080/users/validation?username=${username.value}&password=${password.value}`)
+    * 	.then((response) => {
+    *    	console.log(response)
+    * 	})
+    * })
+    * 
+    * But we arent actually getting any access to the body of the response. Theres a request and a 
+    * response. Request is what we're sending, response is what we're receiving. so with this code
+    * above, we can type in a username and apassword in the fields and we can see what we are 
+    * sending, but all we get in return is the response object. we need to gain access to the body
+    * within that object to see what is actually being received.
+    * 
+    * To do that we have to say:
+    * 	.then((response) => {
+    *    	return response.json()
+    * 	})
+    * 
+    * and what this will so is take the entire body and turn it into a json format. then you can 
+    * syso that data. 
+    * 
+    * 	.then((response) => {
+    *    	return response.json()
+    * 	})
+    * 	.then((jsonResponse) => {
+    * 		console.log(jsonResponse
+    * 	})
+    * 
+    * jsonResponse can be called anything, this is just what i called it.
+    * 
+    * And now when we do this, we get the response "true" which makes sense, because that is 
+    * what we are sending back in our get mapping. I will commit this here so we can see the example.
     * 
 	*/
 }
