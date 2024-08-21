@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 	
 	@GetMapping("/validation")
-	public boolean getExists(String username) {
+	public boolean getExists(String username, String password) {
+		System.out.println("Username = " + username + ", Password = " + password);
 		return true;
 	}
 

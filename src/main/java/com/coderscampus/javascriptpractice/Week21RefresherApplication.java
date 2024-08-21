@@ -322,6 +322,14 @@ public class Week21RefresherApplication {
     * And now when we do this, we get the response "true" which makes sense, because that is 
     * what we are sending back in our get mapping. I will commit this here so we can see the example.
     * 
+    * And there is also a shorter way to write this. If we remove the curly brackets around the 
+    * return, the return keyword is assumed. See below
+    * 
+    *  	.then((response) => response.json())
+    * 	.then((jsonResponse) => {
+    * 		console.log(jsonResponse
+    * 	})
+    * 
 	*/
 }
 

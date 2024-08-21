@@ -22,9 +22,7 @@ username.addEventListener(`blur`, () => {
     var username = document.querySelector(`#username`)
     var password = document.querySelector(`#password`)
     fetch(`http://localhost:8080/users/validation?username=${username.value}&password=${password.value}`)
-        .then((response) => {
-            return response.json()
-        })
+        .then((response) => response.json())
         .then((jsonResponse) => {
             console.log(jsonResponse)
         })
