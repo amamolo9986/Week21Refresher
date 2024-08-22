@@ -2,6 +2,10 @@ package com.coderscampus.javascriptpractice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.coderscampus.javascriptpractice.domain.User;
 
 @SpringBootApplication
 public class Week21RefresherApplication {
@@ -334,6 +338,89 @@ public class Week21RefresherApplication {
     * Next video we will modify this to be a post request instead.
     * 
     * Video 12: Fetch API with Post
+    * 
+    * 
+    * We saw in the previous video how to do a get request with a get mapping, but what about a 
+    * post? Lets create a post mapping method in our controller to start. Trevor names these 
+    * methods "exists", but i named them both "validation" just making a note so i dont get
+    * confused when reading this later.
+    * 
+    * So this post will act differently in terms of how data is passed into the java method.
+    * He said that we may be tempted to set it up similarly to the get, and he will show us that
+    * is doesnt work that way, then also show us the right way to do it. 
+    * 
+    * So we temporarily have the get and post matching, then we go into our JS to set up the post.
+    * remember that we do not pass data through the URL params for a post mapping, just a get. so we 
+    * delete the URL params for our fetch.
+    * 
+    * Next we need to oevrload this fetch method to use the two arg, and the second one is an object.
+    * Similar to an event lister where the first arg is the event and the second one is the function.
+    * 
+    * Now within this object we specify a few things, one being the method, which is post - and 
+    * remember the objects in JS are key value pairs. Next we add the header, and the value 
+    * for this is actually another object, and it specifies the content to be sent in json format.
+    * By default the content is sent as plain text and we have to say "hey, thi sneeds to be json"
+    * And then finally we have the body of the request. And with the body, you can pass data a few 
+    * different ways, one is we can pass the values as strings and as objects, but we should 
+    * really pass them as objects because its better.
+    * 
+    * Fetch with a String body:
+    * 
+    * body: `{
+    *         "username": "${username.value}"
+    *         "password": "${password.value}"
+    *     }`
+    *     
+    *     and like this, we pull from the username and password query selectors.
+    * 
+    * Technically a body needs to be a string in order to be sent, and we can type it as a 
+    * string, but its tedious and varbose and we are lazy. so we create the user object
+    * instead, and this object will contain a username and a password, then we can use a methiod
+    * called JSON.stringify() and we pass the object through the params, and this is how we can
+    * pass the body off as a string.
+    * 
+    * So we end up with this instead:
+    * 
+    * var user = {
+    *         "username": username.value,
+    *         "password": password.value
+    *     }
+	* 
+    * fetch(`http://localhost:8080/users/validation`, {
+    *     method: "POST",
+    *     headers: {
+    *         "Content-Type": "application/json"
+    *     },
+    *     body: JSON.stringify(user)
+    * })
+    * 
+    * So now we test, and remember that we are testing the incorrect way if writing the postmapping
+    * mathod in the java side, and when we run it and try to submit, we get a null for the username
+    * and the password. why is that? Well we arent accepting the data in a proper format. Remember
+    * we are sending an object with two keys and two values, not two strings. So we need to pass 
+    * the user object through these params instrad of the two strings.
+    * 
+    * So instead of this:
+    * 
+    * @PostMapping("/validation")
+	* public boolean postExists(String username, String password) {
+	* 	System.out.println("Username = " + username + ", Password = " + password);
+	* 	return true;
+	* }
+	* 
+	* We say this: 
+	* 
+    * @PostMapping("/validation")
+	* public Boolean postValidated(User user) {
+	* 	System.out.println("Username = " + user.getUsername() + ", Password = " + user.getPassword());
+	* 	return true;
+	* }
+    * 
+    * And finally we need to annotate @RequestBody in our param before the user object in the 
+    * postMapping method.
+    * 
+    * 
+    * 
     * 
 	*/
 }

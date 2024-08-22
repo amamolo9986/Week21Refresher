@@ -21,7 +21,19 @@ submitBtn.addEventListener(`click`, () => {
 username.addEventListener(`blur`, () => {
     var username = document.querySelector(`#username`)
     var password = document.querySelector(`#password`)
-    fetch(`http://localhost:8080/users/validation?username=${username.value}&password=${password.value}`)
+
+    var user = {
+        "username": username.value,
+        "password": password.value
+    }
+
+    fetch(`http://localhost:8080/users/validation`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
         .then((response) => response.json())
         .then((jsonResponse) => {
             console.log(jsonResponse)
