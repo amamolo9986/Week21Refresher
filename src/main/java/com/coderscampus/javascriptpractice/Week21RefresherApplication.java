@@ -419,6 +419,19 @@ public class Week21RefresherApplication {
     * And finally we need to annotate @RequestBody in our param before the user object in the 
     * postMapping method.
     * 
+    * And we are GOOD.
+    * 
+    * We dont have the User object addeds to the database, so we will independently add this to the DB.
+    * we should also check to see if the username is valid in the database. just a little mini assignment.
+    * 
+    * But thats about it for this one.
+    * 
+    * Unit 22 Vid 1: Creating Another Registration Page
+    * 
+    * 
+    * 
+    * 
+    * 
     * 
     * 
     * 

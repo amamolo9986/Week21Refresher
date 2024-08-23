@@ -7,10 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.coderscampus.javascriptpractice.domain.User;
+import com.coderscampus.javascriptpractice.service.UserService;
 
 @RestController
 @RequestMapping("users")
 public class UserController {
+	
+	private UserService userService;
+
+	public UserController(UserService userService) {
+		super();
+		this.userService = userService;
+	}
 
 	@GetMapping("/validation")
 	public boolean getExists(String username, String password) {
@@ -20,8 +28,9 @@ public class UserController {
 
 	@PostMapping("/validation")
 	public Boolean postValidated(@RequestBody User user) {
-		System.out.println("Username = " + user.getUsername() + ", Password = " + user.getPassword());
-		return true;
+		user = userService.checkIfUserExists(user.getUsername());
+			
+		return (user != null);
 	}
 
 }
