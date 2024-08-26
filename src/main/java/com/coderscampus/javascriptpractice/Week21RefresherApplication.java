@@ -429,6 +429,21 @@ public class Week21RefresherApplication {
     * Unit 22 Vid 1: Creating Another Registration Page
     * 
     * 
+    * Create registration html page, we create a form of method post and nest some divs in there
+    * for a username and password inout, a confirn password, and a submit button. We then create 
+    * a getmapping and postmapping in the user controller. but thje user controller is set up as
+    * a Rest Controller so we have to modify this such that we are able to use both a regular and
+    * a rest controller. how we do that is change the annotation to @Controller, then on each 
+    * controller that we need to be a rest, we annotate it with @ResponseBody.
+    * 
+    * Controller returns a View
+    * Rest Controller returns an Object
+    * 
+    * Now we can set this up properly. We can set up the registration page to check if a username 
+    * exists, we can set up the password confitmation, and we can also set up the post mapping for
+    * the submit button.
+    * 
+    * We will also learn about call backs and promises.
     * 
     * 
     * 

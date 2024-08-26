@@ -36,10 +36,6 @@ username.addEventListener(`blur`, () => {
     })
         .then((response) => response.json())
         .then((data) => {
-            if (data) {
-                alert("Username already exists!");
-            } else {
-                alert("Username is available.");
-            }
-        });
-});
+            console.log(data)
+        })
+})
