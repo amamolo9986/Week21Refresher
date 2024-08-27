@@ -9,10 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.coderscampus.javascriptpractice.domain.User;
+import com.coderscampus.javascriptpractice.service.UserService;
 
 @Controller
 @RequestMapping("users")
 public class UserController {
+	
+	private UserService userService;
+
+	public UserController(UserService userService) {
+		super();
+		this.userService = userService;
+	}
 
 	@PostMapping("/validation")
 	@ResponseBody
@@ -28,7 +36,11 @@ public class UserController {
 		return "register";
 	}
 	
-	//@PostMapping("/register")
+	@PostMapping("/register")
+	public String postRegister(User user) {
+		userService.saveUser(user);
+		return "redirect:/login";
+	}
 	
 
 }

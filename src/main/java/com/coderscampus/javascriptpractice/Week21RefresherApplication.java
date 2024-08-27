@@ -430,11 +430,14 @@ public class Week21RefresherApplication {
     * 
     * 
     * Create registration html page, we create a form of method post and nest some divs in there
-    * for a username and password inout, a confirn password, and a submit button. We then create 
-    * a getmapping and postmapping in the user controller. but thje user controller is set up as
-    * a Rest Controller so we have to modify this such that we are able to use both a regular and
-    * a rest controller. how we do that is change the annotation to @Controller, then on each 
-    * controller that we need to be a rest, we annotate it with @ResponseBody.
+    * for a username and password inout, a confirm password, and a submit button. Side note, by
+    * default, if you create a button within a form and do not specify the button type, it wil
+    * default to "type="submit""
+    * 
+    * We then create a getmapping and postmapping in the user controller. but thje user controller 
+    * is set up as a Rest Controller so we have to modify this such that we are able to use both a 
+    * regular and a rest controller. how we do that is change the annotation to @Controller, then 
+    * on each controller that we need to be a rest, we annotate it with @ResponseBody.
     * 
     * Controller returns a View
     * Rest Controller returns an Object
@@ -445,6 +448,25 @@ public class Week21RefresherApplication {
     * 
     * We will also learn about call backs and promises.
     * 
+    * 
+    * Unit 22 Vid 2: Adding a Unique Constraint on Username
+    * 
+    * 
+    * We will allow the registration page to actually create a user within the data base
+    * We are also creating the table and everything, but i already did that.
+    * 
+    * PS dont forget that post mappings should always return a "redirect:" before the endpoint
+    * 
+    * Now that we have that set up, how can we make sure that we do not create usernames that 
+    * are not unique? We can use the @Column annotation and set it to true. Now by DEFAULT
+    * this is set to false, so we have to explicitly say @Column(unique = true) above our
+    * field.
+    * 
+    * We get a 500 error on the client side and a Duplicate Entry exception on the server side.
+    * 
+    * WE dont want to see these errors, its like the last line of defense that the DB has, so this
+    * is where JS should come in. We can check if a user exists on a blur event when the username
+    * field has been tabed out so we dont have to see this ugly whitelabel page
     * 
     * 
     * 
