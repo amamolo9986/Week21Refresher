@@ -25,8 +25,8 @@ public class UserController {
 	@PostMapping("/validation")
 	@ResponseBody
 	public Boolean postValidated(@RequestBody User user) {
-		System.out.println("Username = " + user.getUsername() + ", Password = " + user.getPassword());
-		return true;
+		user = userService.usernameCheck(user.getUsername());
+		return (user != null);
 	}
 	
 	@GetMapping("/register")

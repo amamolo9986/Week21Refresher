@@ -469,6 +469,29 @@ public class Week21RefresherApplication {
     * field has been tabed out so we dont have to see this ugly whitelabel page
     * 
     * 
+    * Vid 3: Handling a fetched response
+    * 
+    * 
+    * Now we're getting into the concept of augmenting our code with some JS such that we will 
+    * perform a check to see if a username already exists before submitting the form.
+    * 
+    * first thing we will do is create the JS page. WE can add it into the HTML itself, but thats 
+    * messy.
+    * 
+    * So here are the steps:
+    * 
+    * Create a query selector for the username text box - usernameTextBox
+    * Add event listener on blur of usernameTextBox
+    * Create fetch API - and endpoints should match the endpoints in controllers, not full http
+    * Create the object to pass through JSON stringify, in this case its user and we omit password
+    * Then when we get a response, we do something with it. We do that with .then()
+    * Create variable for the response, we use data
+    * Then we create a conditional for that data response, if true, do something, else, something else 
+    * 
+    * 
+    * Vid 4: Finding Existing Users Logic
+    * 
+    * I did this logic after the last video but i will take notes on it anyways
     * 
     * 
     * 

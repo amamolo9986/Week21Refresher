@@ -19,6 +19,11 @@ public class UserService {
 		return userRepo.save(user);
 		
 	}
+
+	public User usernameCheck(String username) {
+		return userRepo.findByUsername(username);
+	}
+
 	
 
 }
