@@ -7,7 +7,7 @@ import com.coderscampus.javascriptpractice.repository.UserRepository;
 
 @Service
 public class UserService {
-	
+
 	private UserRepository userRepo;
 
 	public UserService(UserRepository userRepo) {
@@ -17,13 +17,11 @@ public class UserService {
 
 	public User saveUser(User user) {
 		return userRepo.save(user);
-		
+
 	}
 
-	public User usernameCheck(String username) {
+	public User findByUsername(String username) {
 		return userRepo.findByUsername(username);
 	}
-
-	
 
 }

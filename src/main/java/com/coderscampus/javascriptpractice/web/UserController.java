@@ -25,7 +25,7 @@ public class UserController {
 	@PostMapping("/validation")
 	@ResponseBody
 	public Boolean postValidated(@RequestBody User user) {
-		user = userService.usernameCheck(user.getUsername());
+		user = userService.findByUsername(user.getUsername());
 		return (user != null);
 	}
 	

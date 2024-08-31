@@ -493,6 +493,21 @@ public class Week21RefresherApplication {
     * 
     * I did this logic after the last video but i will take notes on it anyways
     * 
+    * I will list the steps like the previous video:
+    * 
+    * In the Validation endpoint we call the userService.findByUsername method
+    * Add a parameter of user.getUsername
+    * Create the method within the userService
+    * Within the service we return the userRepo.findByUsername(username)
+    * Then we also create the method within the Repo
+    * Then we return (user!=null) in the controller because we are returning the boolean value
+    * 	based off of "is the user not equal to null? yes or no." We want that to be a yes, so 
+    * 	that way we basically say "this user exists, execute the method."
+    * 
+    * 
+    * So now that we have this figured out, we can introduce the concept of a callback.
+    * 
+    * 
     * 
     * 
 	*/
