@@ -505,7 +505,25 @@ public class Week21RefresherApplication {
     * 	that way we basically say "this user exists, execute the method."
     * 
     * 
-    * So now that we have this figured out, we can introduce the concept of a callback.
+    * So now that we have this figured out, we can introduce the concept of a callback, which is 
+    * also the predecessor for a promise. so we should really understand what a callback is first.
+    * 
+    * So how can we make use of this? Well the purpose of a callback is to execute a method when 
+    * something that is asynchronously running, is finished. so you 'callbacl' to the moment that
+    * whatever you were waiting for, is finished, to execute the next step. 
+    * 
+    * You have to put sauce on the pasta but only after its finished cooking, so you bake garlic 
+    * bread while you wait, and then when the pasta is done, you 'callback' the pasta sauce
+    * 
+    * So we'll add a textbox glow animation callback that will glow red for a non unique
+    * username.
+    * 
+    * He then finds a function for a JS animation and explains it - around the 11 minute mark
+    * 
+    * Then he says that we will take this code and modify it for our text box.
+    * 
+    * Vid 5: Callbacks
+    * 
     * 
     * 
     * 
