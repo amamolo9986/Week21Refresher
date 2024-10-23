@@ -35,7 +35,7 @@ function showErrorAnimation(callback){
     var animationInterval = setInterval(() => {  //create the interval and set equal to variable
         i++         //create the incrementation
         usernameTextBox.style.backgroundColor = `rgb(${i}, 0, 0)`   //set the background color
-        if (i === 255){     //then we say when i = 255, we clear the interval
+        if (i >= 255){     //then we say when i = 255, we clear the interval
             clearInterval(animationInterval)    
             console.log(`Done executing animation code: 2`)
             callback()

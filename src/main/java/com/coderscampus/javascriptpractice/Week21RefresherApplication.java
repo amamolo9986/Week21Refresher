@@ -560,9 +560,11 @@ public class Week21RefresherApplication {
     * actual sleep time, so we can say something like 5 milliseconds.
     * 
     * So i wrote everything in the js file with notes on how it worked then i committed it again
-    * so its in github for reference
+    * so its in github for reference. I committed this with a note saying that the color doesnt 
+    * work, and it kind of doesnt, but i noticed that when i clear the text, the color is 
+    * underneath. Not sure why, but the color is there, its just hidden.
     * 
-    * 
+    * 14:24
     * 
     * 
     * 
