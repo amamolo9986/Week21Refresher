@@ -21,22 +21,22 @@ username.addEventListener(`blur`, () => {
                 showErrorAnimation(() => {
                     //animation is completed at this point
                     console.log(`We're now in the callback function: 3`)
+                    usernameTextBox.style.backgroundColor = `rgb(255, 255, 255)`
+                    // then we change the color back to white afer the interval clears or else it will stay red
                 })
-            } else{
-                usernameTextBox.style.backgroundColor = `rgb(255, 255, 255)`
-            }  // then we change the color back to white afer the interval clears or else it will stay red
+            }
         })
 })
 
-function showErrorAnimation(callback){
+function showErrorAnimation(callback) {
     console.log(`We're in the showErrorAnimation function: 1`)
 
     var i = 0       //set our variable
     var animationInterval = setInterval(() => {  //create the interval and set equal to variable
         i++         //create the incrementation
         usernameTextBox.style.backgroundColor = `rgb(${i}, 0, 0)`   //set the background color
-        if (i >= 255){     //then we say when i = 255, we clear the interval
-            clearInterval(animationInterval)    
+        if (i >= 255) {     //then we say when i = 255, we clear the interval
+            clearInterval(animationInterval)
             console.log(`Done executing animation code: 2`)
             callback()
         }
