@@ -551,6 +551,16 @@ public class Week21RefresherApplication {
     * flow is moving. I also committed this so theyre saved in github history. 
     * 
     * 
+    * So now we'll actually go ahead and work on the animation that we were wanting to create.
+    * The method we are wanting to call is the setInterval() method, and what this will do is 
+    * allow us to repeatedly call a function over and over again after a specified number of 
+    * milliseconds until a certain amount of time has lapsed.
+    * 
+    * So we will create an in line function within this method and our second parameter is the 
+    * actual sleep time, so we can say something like 5 milliseconds.
+    * 
+    * So i wrote everything in the js file with notes on how it worked then i committed it again
+    * so its in github for reference
     * 
     * 
     * 
