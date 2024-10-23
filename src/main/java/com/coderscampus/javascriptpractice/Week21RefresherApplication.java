@@ -522,8 +522,31 @@ public class Week21RefresherApplication {
     * 
     * Then he says that we will take this code and modify it for our text box.
     * 
+    * 
     * Vid 5: Callbacks
     * 
+    * We want to create some sort of animation to provide a visual for when a username already 
+    * exists in the database. 
+    * 
+    * So to do this we want to call a function to do this, and the function that we call, we will 
+    * pass a parameter to that function that will also contain another function called a callback
+    * function.
+    * 
+    * So within the first function we call the second function at the end.
+    * 
+    * So lets create a function called showErrorAnimation(), and then at the end of this function
+    * we want to execute the callback. The empty function will look like this:
+    * 
+    * function showErrorAnimation(callback){
+    *
+    * 	callback
+    * }
+    * 
+    * So the first thing we need to do is call the actual showErrorAnimation function in our if 
+    * statement so it gets executed if a username does exist in the db.
+    * 
+    * He does a brief explanation of the callback flow at about 3 minutes, but it doesnt really
+    * make sense to me. I think hes going to go more in depth soon with some console logs.
     * 
     * 
     * 
