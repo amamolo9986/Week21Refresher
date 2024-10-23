@@ -547,6 +547,11 @@ public class Week21RefresherApplication {
     * 
     * He does a brief explanation of the callback flow at about 3 minutes, but it doesnt really
     * make sense to me. I think hes going to go more in depth soon with some console logs.
+    * Yes he did this and i added some notes in the logs so we can see the order in which the 
+    * flow is moving. I also committed this so theyre saved in github history. 
+    * 
+    * 
+    * 
     * 
     * 
     * 

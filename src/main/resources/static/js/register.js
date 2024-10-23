@@ -20,17 +20,17 @@ username.addEventListener(`blur`, () => {
                 usernameTextBox.select() //highlights text
                 showErrorAnimation( () => {
                     //animation is completed at this point
-                    console.log(`We're now in the callback function`)
+                    console.log(`We're now in the callback function: 3`)
                 })
             }
         })
 })
 
 function showErrorAnimation(callback){
-    console.log(`We're in the showErrorAnimation function`)
+    console.log(`We're in the showErrorAnimation function: 1`)
     //perform error animation code
-    console.log(`Done executing animation code`)
-    callback
+    console.log(`Done executing animation code: 2`)
+    callback()
 }
 
 
