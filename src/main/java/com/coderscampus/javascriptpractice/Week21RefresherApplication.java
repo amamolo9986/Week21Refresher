@@ -568,16 +568,82 @@ public class Week21RefresherApplication {
     * 
     * 
     * 
-    * Video 6: Callbacks and the let keyword
+    * Video 6: Promises and the let keyword
+    * 
+    * So how we will navigate this is we will essentially refactor the code that we just wrote 
+    * in the callback lesson and replace it with the more favorable approach, which is a promise.
+    * 
+    * I was going to leave all of the callback notes here before we change them, but i have them
+    * committed so i will refer to them in my vid 5 commit history.
     * 
     * 
+    * So before we start refactoring the code, lets dive into what a promise is and what it looks 
+    * like syntactically.
     * 
     * 
+    * So lets say we have something called myPromise that we will instantiate with the new 
+    * keyword: var myPromise = new Promise()
+    * Now within this promise we will have a function with two parameters, resolve and reject, 
+    * and within the scope of the function we can essentially envoke a resolve or a reject.
+    * 
+    * So lets create a variable, and instead of using var we'll use the let keyword. This 
+    * will allow scoping, its how we use every variable in java, its available within the 
+    * scope of the method, and var is function scoped. NOTE: Let also tends to be the prefered 
+    * method.
+    * 
+    * So trevor shows us an example of how to instantiate a promise, call either the resolve
+    * or reject variables within the promise, and then call the promise itself. I will show 
+    * you below
+    * 
+    * 
+    * var myPromise = new Promise((resolve, reject) => {
+    * 	let i = 1
+	*
+    * 	if (i === 1){
+    * 	   resolve(`Hey, i equals 1, so we're cool`)
+    * 	} else {
+    *	    reject(`Absolute fail, i is not 1`)
+    * 	}
+	* })
+    * 
+    * so we set i equal to one and then add a message for the reject and the resolve. So we 
+    * then call the myPromise function like this:
+    * 
+    * myPromise.then((message) =>{
+    * 	console.log(message)
+	* })
+    * 
+    * and it says "call this myPromise function, THEN display the appropriate message. However,
+    * if the function results in a reject, it will throw an exception, so we need to catch it.
+    * 
+    *
+    * myPromise.then((message) =>{
+    * 	console.log(message)
+	* }).catch((message) => {
+    * console.log(message)
+	* })
+    *
+    * He says that this is what it would look like if we are building promises out ourselves, but
+    * typically we dont do that. we normally leverage other peoples code and promises.
+    * 
+    * for example, when we look at out fetch function, it returns a .then, that ,then is a 
+    * promise. a fetch returns a promise and in order to use them we use a .then.
+    * 
+    * So now we will move on to the refactoring of the callback, i will comment out this promise
+    * code and move it down to the bottom of the code so we can reference it later.
+    * 
+    * 
+    * So now looking at the existing callback, trevor is saying that we can basically turn it into
+    * a promise.  
+    *
+    * 10:50
+    *
     *
     * 
     * 
 	*/
 }
+
 
 
 
