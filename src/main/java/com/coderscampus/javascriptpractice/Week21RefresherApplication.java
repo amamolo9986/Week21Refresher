@@ -636,7 +636,15 @@ public class Week21RefresherApplication {
     * So now looking at the existing callback, trevor is saying that we can basically turn it into
     * a promise.  
     *
-    * 10:50
+    * I'm going to make the revisions and not keep any of the callback notes because i have them in 
+    * the commit.
+    * 
+    * I just finished this video and i think javascripts syntax and the code flow is still hard
+    * to wrap my head around. need to dive deeper.
+    *
+    *
+    *
+    * Vid 7: Query Selector All and Font Awesome
     *
     *
     * 
