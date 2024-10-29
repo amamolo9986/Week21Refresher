@@ -1,4 +1,5 @@
 var usernameTextBox = document.querySelector(`#username`)
+var eyeIcons = document.querySelectorAll(`fa-eye`)
 
 username.addEventListener(`blur`, () => {
     var user = {
@@ -18,6 +19,8 @@ username.addEventListener(`blur`, () => {
             usernameTextBox.focus() //redirects back to box
             usernameTextBox.select() //highlights text
             showErrorAnimation().then((message) => {
+                //When a function call is followed by .then() the parameter in 'then' will 
+                //always hold the value passed to resolve
                 console.log(message)
                 console.log(`We're now in the callback function: 3`)
                 usernameTextBox.style.backgroundColor = `rgb(255, 255, 255)`
@@ -49,25 +52,3 @@ function showErrorAnimation(){
 
 
 
-
-
-
-
-
-
-
-// var myPromise = new Promise((resolve, reject) => {
-//     let i = 2
-
-//     if (i === 1){
-//         resolve(`Hey, i equals 1, so we're cool`)
-//     } else {
-//         reject(`Absolute fail, i is not 1`)
-//     }
-// })
-
-// myPromise.then((message) =>{
-//     console.log(message)
-// }).catch((message) => {
-//     console.log(message)
-// })

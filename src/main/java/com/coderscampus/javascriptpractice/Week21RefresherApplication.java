@@ -639,14 +639,35 @@ public class Week21RefresherApplication {
     * I'm going to make the revisions and not keep any of the callback notes because i have them in 
     * the commit.
     * 
-    * I just finished this video and i think javascripts syntax and the code flow is still hard
-    * to wrap my head around. need to dive deeper.
-    *
-    *
+	* Also note: When a function call is followed by .then() the parameter in 'then' will always 
+	* hold the value passed to resolve
+	* 
     *
     * Vid 7: Query Selector All and Font Awesome
-    *
-    *
+    * 
+    * He opens this video by talking about query selectors and that there is another version that
+    * is query selector all. What this does is return more than one element from the screen that
+    * can be grabbed. This is helpful when we want to grab a group of things and do something with
+    * the group of things.
+    * 
+    * He then starts to talk about how sometimes for password input fields theres a little eye icon
+    * and when you push it it reveals the password. i imagine we will be using the query select all
+    * to execute this
+    * Okay yes, he then proceeds to talk about how we will need two separate eye icons, each being 
+    * tied to a different function.
+    * So for the icon we will be using font awesome.
+    * 
+    * So we go to our kit, pull the line of js, and drop it into our html page header, and now we
+    * have access to the icons. So now how do we get the icons? Well we find the icon we want, we
+    * click on it, and it gives us the code. Now its an element for us to paste wherever we like.
+    * So we put it in our password divs.
+    * 
+    * Now we have to wrote the code that says "when i click the eye, do something" and thats all
+    * going to be js. 
+    * 
+    * 7:08
+    * 
+    * 
     * 
     * 
 	*/

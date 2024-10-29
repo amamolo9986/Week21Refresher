@@ -3,6 +3,7 @@
 
 <head>
     <title>Register</title>
+    <script src="https://kit.fontawesome.com/f42f4c75d8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,11 +15,11 @@
         </div>
         <div style="margin-bottom: 3px;">
             <label>Password</label>
-            <input type="password" th:field="${user.password}"/>
+            <input type="password" th:field="${user.password}"/> <i class="fa-regular fa-eye"></i>
         </div>
         <div style="margin-bottom: 3px;">
             <label>Confirm Password</label>
-            <input type="password" id="confirmPassword"/>
+            <input type="password" id="confirmPassword"/> <i class="fa-regular fa-eye"></i>
         </div>
         <button type="submit" >Create Account</button>
     </form>
