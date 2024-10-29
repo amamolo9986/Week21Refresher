@@ -662,11 +662,48 @@ public class Week21RefresherApplication {
     * click on it, and it gives us the code. Now its an element for us to paste wherever we like.
     * So we put it in our password divs.
     * 
-    * Now we have to wrote the code that says "when i click the eye, do something" and thats all
-    * going to be js. 
+    * Now we have to write the code that says "when i click the eye, do something" and thats all
+    * going to be js. So we make the query selector all and the class name for the icons we just 
+    * inserted.
     * 
-    * 7:08
+    * Note - query selectors: select by class = ".className", select by id = "#idName"
     * 
+    * Also QuerySelectorAll returns a nodeList, so when we add a console log we can see that there
+    * is a node list now and we have two elements in that list because we added two icons. So now how 
+    * do we do something with this list? Well we can create a forEach loop that iterated through the 
+    * icons. So that'll look like this 
+    * 
+    * eyeIcons.forEach( (eyeIcon) => {
+    * )} 
+    * 
+    * And this "eyeIcon" in the parameter is the name of each element within the list, its just a 
+    * variable, we can name it whatever we like. And then within the for each loop we can say 
+    * "variableName." and then perform operations on the elements.
+    * 
+    * So how we'll start off is by adding a click event listener on the icons and creating a console
+    * log of itself, then we can add id's for each icon in the html, one for password and one for 
+    * confirm password. and now when we click on the icons, it will concole log the one that we clicked, 
+    * whether it be the password eye or the confirm password eye
+    * 
+    * Okay so we tested this and it works! So what we want to do now is whenever we click on the eye
+    * icon, we want it to do two things: first we want it to visually change into another icon, and 
+    * functionally we want it to change the appearance of the characters within the input.
+    * 
+    * and we can use something called "classList" and i think it shows us the classes associated with 
+    * certain elements. So both of our eye icons have the name 'fa-eye' attached to them, so we will 
+    * iterate through the elements by saying 'if the eye icon class list contains 'fa-eye', do something'.
+    * And we can say 'eyeIcon.classList.replace()', and the parameters are (currentElement, replacement)
+    * and this will replace from one icon to the other.
+    * 
+    * classList has a few methods, we can google them to see what all it can do, but replace is one of
+    * them.
+    * 
+    * But now we're able to swap the icons from one to another, and now we need to change the password
+    * text within the input
+    * 
+    *
+    * Stopped explaining and just started coding around 16 minutes. Should go over it and take notes to 
+    * make sure that i understand
     * 
     * 
     * 

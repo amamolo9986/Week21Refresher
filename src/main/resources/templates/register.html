@@ -15,11 +15,13 @@
         </div>
         <div style="margin-bottom: 3px;">
             <label>Password</label>
-            <input type="password" th:field="${user.password}"/> <i class="fa-regular fa-eye"></i>
+            <input type="password" th:field="${user.password}"/> 
+            <i id="passwordEyeIcon" class="fa-regular fa-eye"></i>
         </div>
         <div style="margin-bottom: 3px;">
             <label>Confirm Password</label>
-            <input type="password" id="confirmPassword"/> <i class="fa-regular fa-eye"></i>
+            <input type="password" id="confirmPassword"/> 
+            <i id="confirmPasswordEyeIcon" class="fa-regular fa-eye"></i>
         </div>
         <button type="submit" >Create Account</button>
     </form>
