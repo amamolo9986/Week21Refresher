@@ -698,12 +698,22 @@ public class Week21RefresherApplication {
     * classList has a few methods, we can google them to see what all it can do, but replace is one of
     * them.
     * 
-    * But now we're able to swap the icons from one to another, and now we need to change the password
-    * text within the input
+    * So we're able to swap the icons from one to another, but now we need to change the password
+    * text within the input. To do this, we need to create another if statement. Two more rather.
+    * 
+    * We originally had this if statement that said "if the element contains a specific key word,
+    * change the icon from regular, to a slash, else, change it from slash to regular. Now this new
+    * if statement that allows us to change the text will be nested within this statement.
+    * 
+    * To do this we need to create a query selector on the inputs so that we can toggle the type
+    * between test and password, then we can say if type = text, change to password, and vice versa.
+    * 
+    * 
+    * Vid 8: Async and Await
+    * 
     * 
     *
-    * Stopped explaining and just started coding around 16 minutes. Should go over it and take notes to 
-    * make sure that i understand
+    * 
     * 
     * 
     * 
