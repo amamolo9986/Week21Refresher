@@ -711,6 +711,34 @@ public class Week21RefresherApplication {
     * 
     * Vid 8: Async and Await
     * 
+    * So there is a way to work with promises that feels slightly more familiar/more synchronous
+    * Trevor says. This is Async and Await. We can take any promise and give it the syntax/structure
+    * to behave like a synchronous structure and flow.
+    * 
+    * he then goes through and explains the flow of the code that we currently have for the first 6
+    * ish minutes.
+    * 
+    * So how do we use async and await? Well we have to start by extracting the promise code and
+    * and use it to create its own function. So basically all of the fetch and .then code we will
+    * extract and move. Now we create the function and we will name it "checkIfUserExists", and we
+    * will pass in a user, then we call that function and the passed in user where we just removed 
+    * the code from.
+    * 
+    * So now that everything is in place, we test the code and it still works as it did before, 
+    * but its still asynchronous. So here is where the keywords come in, before our newly constructed
+    * function, we add the async keyword and we will add the await before the fetch in that function.
+    * 
+    * What this says is to execute the promise, but physically wait until the promise is resolved or
+    * rejected before you move on. He also sets the await equal to the responseEntity which i dont 
+    * fully understand to be honest. He's changing a lot of things very quickly and i'm not super able
+    * to follow the why's. i am at minute 12.
+    *  
+    * I will just watch from here on out and not take notes
+    * 
+    * 
+    * 
+    * 
+    * 
     * 
     *
     * 

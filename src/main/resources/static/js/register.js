@@ -25,31 +25,35 @@ username.addEventListener(`blur`, () => {
     var user = {
         'username': usernameTextBox.value,
     }
-    fetch(`/users/validation`, {
+    checkIfUserExists(user)
+})
+
+async function checkIfUserExists(user) {
+    let responseEntity = await fetch(`/users/validation`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(user)
     })
-        .then((responseEntity) => responseEntity.json())
-        .then((data) => {
-            if (data === true) { //if username exists
-                console.log(`Username already exists`)
-                usernameTextBox.focus() //redirects back to box
-                usernameTextBox.select() //highlights text
-                showErrorAnimation().then((message) => {
-                    //When a function call is followed by .then() the parameter in 'then' will 
-                    //always hold the value passed to resolve
-                    console.log(message)
-                    console.log(`We're now in the callback function: 3`)
-                    usernameTextBox.style.backgroundColor = `rgb(255, 255, 255)`
-                    // then we change the color back to white afer the interval 
-                    //clears or else it will stay red
-                })
-            }
+    let userExists = await responseEntity.json()
+
+    if (userExists === true) { //if username exists
+        console.log(`Username already exists`)
+        usernameTextBox.focus() //redirects back to box
+        usernameTextBox.select() //highlights text
+        showErrorAnimation().then((message) => {
+            //When a function call is followed by .then() the parameter in 'then' will 
+            //always hold the value passed to resolve
+            console.log(message)
+            console.log(`We're now in the callback function: 3`)
+            usernameTextBox.style.backgroundColor = `rgb(255, 255, 255)`
+            //then we change the color back to white afer the interval 
+            //clears or else it will stay red
         })
-})
+    }
+}
+
 function showErrorAnimation() {
     return new Promise((resolve, reject) => {
         console.log(`We're in the showErrorAnimation function: 1`)
